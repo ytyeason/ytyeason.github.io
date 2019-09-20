@@ -1,4 +1,4 @@
-console.log(document.referrer);
+
 const images = ['fox1','fox2','fox3','fox4'];
 const imgElem = document.querySelector('img');
 
@@ -19,6 +19,8 @@ if('serviceWorker' in navigator) {
            .register('/sw.js')
            .then(function() { console.log('Service Worker Registered'); });
 }
+console.log(document.referrer);
+console.log("url!");
 
 // Code to handle install prompt on desktop
 
