@@ -1,3 +1,4 @@
+console.log(document.referrer)
 const images = ['fox1','fox2','fox3','fox4'];
 const imgElem = document.querySelector('img');
 
