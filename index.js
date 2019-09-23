@@ -29,8 +29,10 @@ const addBtn = document.querySelector('.add-button');
 //addBtn.style.display = 'none';
 
 window.addEventListener('beforeinstallprompt', (e) => {
+  
+  console.log("printing event:" + e); 
   // Prevent Chrome 67 and earlier from automatically showing the prompt
-  //e.preventDefault();
+  e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI to notify the user they can add to home screen
@@ -38,7 +40,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
   addBtn.addEventListener('click', (e) => {
     // hide our user interface that shows our A2HS button
-    //addBtn.style.display = 'none';
+    addBtn.style.display = 'none';
     // Show the prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
