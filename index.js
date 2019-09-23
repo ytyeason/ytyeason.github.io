@@ -19,8 +19,6 @@ if('serviceWorker' in navigator) {
            .register('/sw.js')
            .then(function() { console.log('Service Worker Registered'); });
 }
-console.log(document.referrer);
-console.log("url!");
 
 // Code to handle install prompt on desktop
 
